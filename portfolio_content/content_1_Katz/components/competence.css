@@ -1,0 +1,58 @@
+/* Page conpétences */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+label {
+    font-size: 16px;
+    color: #333;
+}
+input, select, button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    background-color: #226340;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #20ac51;
+}
+.messages {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+
+
+/*competence*/
+.competences-list {
+    margin-top: 20px;
+}
+.competences-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.competences-list table th, .competences-list table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.competences-list table th {
+    background-color: #0fa655;
+    color: white;
+}

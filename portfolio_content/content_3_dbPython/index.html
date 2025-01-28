@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Database Viewer</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .table-container {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        // Function to fetch and display data for a specific API and table
+        async function fetchTableData(apiUrl, tableBodyId) {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+
+                const tableBody = document.getElementById(tableBodyId);
+                tableBody.innerHTML = ''; // Clear existing table rows
+
+                // Populate table rows dynamically
+                data.forEach(row => {
+                    const tableRow = document.createElement('tr');
+                    row.forEach(cell => {
+                        const tableCell = document.createElement('td');
+                        tableCell.textContent = cell;
+                        tableRow.appendChild(tableCell);
+                    });
+                    tableBody.appendChild(tableRow);
+                });
+            } catch (error) {
+                console.error(`Error fetching data from ${apiUrl}:`, error);
+            }
+        }
+
+        // Fetch data for both tables on initial page load
+        window.onload = () => {
+            fetchTableData('http://127.0.0.1:5000/api/data1', 'table-body-1');
+            fetchTableData('http://127.0.0.1:5000/api/data2', 'table-body-2');
+        };
+
+        // Function to call the /start_main route in Flask
+        async function startTaskManager() {
+            const response = await fetch('http://127.0.0.1:5000/start_main');  // Change URL if needed
+            const data = await response.json();
+            console.log(data.status);  // Log the response (optional)
+            alert(data.status);  // Show a confirmation message to the user
+        }
+
+    </script>
+</head>
+<body>
+    Bonjour Max oublie pas de lancer le serveur "python app.py" <br><br>
+    <button onclick="startTaskManager()">Ce bouton est censé lancer la fonction main() mais j'y arrive pas :(</button>
+    <h1>SQL Database Viewer</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Tâches</th>
+                </tr>
+                <tr>
+                    <!-- Replace with your column names -->
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Statut</th>
+                    <th>Complétion (%)</th>
+                    <th>Utilisateur n°</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-1">
+                <!-- Dynamic table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <br><br><br>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Utilisateur</th>
+                </tr>
+                <tr>
+                    <!-- Replace with your column names -->
+                    <th>ID</th>
+                    <th>Nom</th>
+                </tr>
+            </thead>
+            <tbody id="table-body-2">
+                <!-- Dynamic table rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

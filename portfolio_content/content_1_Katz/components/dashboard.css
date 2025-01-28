@@ -1,0 +1,66 @@
+/* Page dashboard admin*/
+.htdb {
+    background-color: rgb(114, 140, 119);
+    border-radius: 10px;
+    margin: 30px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0px 2px 10px 2px rgb(127, 127, 127);
+}
+
+.container-admin {
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    border: 1.5 solid white;
+    box-shadow: 0px 3px 10px 3px rgb(167, 166, 166);
+    border-radius: 10px;
+}
+
+
+.deco {
+    float: inline-end;
+    padding: 15px;
+    background-color: rgb(237, 90, 26);
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+    height: 100%;
+}
+.deco a {
+    text-decoration: none;
+
+}
+.deco:hover {
+    background-color: rgb(230, 129, 42);    
+    transform: scale(0.97);
+}
+
+.butdeco:active {
+    transform: scale(0.95);
+}
+
+
+.container h1, .container h2 {
+    text-align: center;
+    color: rgb(62, 62, 62);
+}
+
+/*Les Tables*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 2px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: rgb(97, 113, 97);
+    color: white;
+}

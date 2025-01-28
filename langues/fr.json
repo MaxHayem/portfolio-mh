@@ -9,7 +9,7 @@
   "aboutmee": "Qui suis-je",
   "namee": "Je suis Max HAYEM, ",
   "nameee": "Web Developer",
-  "pave": "Bonjour, je suis Max HAYEM, étudiant en BTS SIO-SLAM. Depuis que je suis tout petit je suis passionné par tout ce qui touche au numérique, que ce soit les ordinateurs, les jeux vidéos ou les sites internet. Avant de faire ce BTS j'ai tenté d'autres voies, j'ai fait une année en prépa intégrée en école d'ingénieur puis en prépa HEC. J'ai ensuite pris une année de césure pour partir 9 mois au Japon, expérience qui m'a fait énormément gagner en maturité. Je parle couramment le français (évidemment) et l'anglais, et je parle bien le japonais ainsi que l'espagnol.",
+  "pave": "Bonjour, je suis Max HAYEM, étudiant en BTS SIO-SLAM. Depuis que je suis tout petit je suis passionné par tout ce qui touche au numérique, que ce soit les ordinateurs, les jeux vidéos ou les sites internet. Avant de faire ce BTS j'ai tenté d'autres voies, j'ai fait une année en prépa intégrée en école d'ingénieur puis en prépa HEC. J'ai ensuite pris une année de césure pour partir un an au Japon, expérience qui m'a fait énormément gagner en maturité. Je parle couramment le français (évidemment) et l'anglais, et je parle bien le japonais ainsi que l'espagnol.",
   "birth": "Né le: ",
   "birthh": "5 août 2002",
   "age": "Âge: ",
@@ -28,7 +28,7 @@
   "expp": "Expériences",
   "alternance": "Alternance à Rubis Energie",
   "alternancee": "Dans le département informatique de l'entreprise dans leurs locaux à la Défense.",
-  "japon": "Voyage en solo de 9 mois au Japon",
+  "japon": "Voyage en solo d'un an au Japon",
   "japonn": "Année de césure qui m'a permis de voyager à travers le Japon. (Tokyo, Kyoto, Osaka, Kobe, Hamamatsu…)",
   "japonnn": "Vécu à Tokyo et à Osaka. ",
   "japonnnn": "Serveur dans un bar international à Tokyo (3 soirs / semaine).",
@@ -37,11 +37,11 @@
   "projett": "Mes projets:",
   "katz": "Site de réservation et d'inscription de particuliers",
   "gophishh": "Campagne anti-phishing avec Gophish",
+  "python": "SQL Database Viewer avec Python",
   "formm": "Formulaire de connexion en NextJs avec Tailwind",
-  "chatt": "Création d'un chat",
   "contactttt": "Contactez-moi",
   "quest": "Des questions ?",
   "serviceee": "Je suis à votre service",
-  "calll": "Appelez moi au",
-  "adressee": "Adresse"
+  "calll": "Téléphone",
+  "adressee": "bitebite"
 }
