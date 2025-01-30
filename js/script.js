@@ -90,3 +90,36 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+
+/* ============================== Contact Form ============================ */
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents the default form submission
+
+    // Get form data
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let subject = document.getElementById("subject").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    // Simple validation
+    if (!name || !email || !subject || !message) {
+        document.getElementById("responseMessage").innerHTML = "<p style='color: red;'>Tous les champs sont obligatoires.</p>";
+        return;
+    }
+
+    // Send data using Fetch API
+    fetch("send_email.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("responseMessage").innerHTML = `<p style='color: green;'>${data}</p>`;
+        document.getElementById("contactForm").reset();
+    })
+    .catch(error => {
+        document.getElementById("responseMessage").innerHTML = "<p style='color: red;'>Erreur d'envoi du message.</p>";
+    });
+});
