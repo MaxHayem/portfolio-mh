@@ -93,7 +93,7 @@ const nav = document.querySelector(".nav"),
 
 /* ============================== Contact Form ============================ */
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
+/*document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevents the default form submission
 
     // Get form data
@@ -102,7 +102,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     let subject = document.getElementById("subject").value.trim();
     let message = document.getElementById("message").value.trim();
 
-    // Simple validation
+     Simple validation
     if (!name || !email || !subject || !message) {
         document.getElementById("responseMessage").innerHTML = "<p style='color: red;'>Tous les champs sont obligatoires.</p>";
         return;
@@ -123,3 +123,4 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         document.getElementById("responseMessage").innerHTML = "<p style='color: red;'>Erreur d'envoi du message.</p>";
     });
 });
+*/

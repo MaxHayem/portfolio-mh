@@ -330,32 +330,32 @@
           <h3 class="contact-title padd-15">Envoyez moi un mail :)</h3>
           <h4 class="contact-sub-title padd-15">Je réponds vite</h4>
           <!-- ====== Contact Form ====== -->
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/mdkabnba" method="POST">
             <div class="row">
               <div class="contact-form padd-15">
                 <div class="row">
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="text" id="name" class="form-control" placeholder="Nom" required>
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Nom" required>
                     </div>
                   </div>
                   <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                      <input type="email" id="email" class="form-control" placeholder="Email" required>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                      <input type="text" id="subject" class="form-control" placeholder="Objet" required>
+                      <input type="text" id="subject" name="objet" class="form-control" placeholder="Objet" required>
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                      <textarea id="message" class="form-control" placeholder="Message" required></textarea>
+                      <textarea id="message" name="message" class="form-control" placeholder="Message" required></textarea>
                     </div>
                   </div>
                 </div>
