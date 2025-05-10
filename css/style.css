@@ -367,7 +367,7 @@ h3.my-profession
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
+    left: 20px;
     top: -40px;
 }
 .home .home-img img
@@ -606,6 +606,51 @@ h3.my-profession
     width: 100%;
     display: block;
 }
+/* veille */
+.veille .container
+{
+    padding-bottom: 40px;
+}
+.veille .veille-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.veille .veille-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+    font-size: 30px;
+}
+.veille .veille-sub-section
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    color: var(--text-black-900);
+    box-sizing: border-box;
+}
+.veille .veille-sub-section h3
+{
+    font-size: 20px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    margin-bottom: 10px;
+    width: 300px;
+    display: flex;
+}
+.veille .scroll-box 
+{
+    width: 300px;
+    height: 200px;
+    border: 1px solid var(--text-black-900);
+    overflow-y: auto;
+    color: var(--text-black-900);
+    padding-bottom: 45px;
+}
 /* contact */
 .contact-title
 {
@@ -761,7 +806,8 @@ h3.my-profession
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .skills,
-    .about .about-content .personal-info
+    .about .about-content .personal-info,
+    .veille .veille-sub-section
     {
         flex: 0 0 100%;
         max-width: 100%;
