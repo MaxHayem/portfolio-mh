@@ -16,6 +16,8 @@
   "age": "Âge: ",
   "agee": "22 ans",
   "phonee": "Téléphone: ",
+  "linkedinn": "Cliquez ici",
+  "gittt": "Cliquez ici",
   "contacttt": "Contactez-moi",
   "parcours": "Parcours académique",
   "isarttt": "A partir de septembre 2025",
@@ -42,8 +44,8 @@
   "katz": "Site de réservation et d'inscription de particuliers",
   "gophishh": "Campagne anti-phishing avec Gophish",
   "python": "SQL Database Viewer avec Python",
-  "qcm": "Générateur de QCM en PHP avec SQL",
   "chatguez": "Chat en PHP avec SQL",
+  "qcm": "Générateur de QCM en PHP avec SQL",
   "veillle": "Veille Informatique",
   "veillee": "Thème de veille: le développement de jeux vidéo",
 
@@ -83,5 +85,10 @@
   "quest": "Des questions ?",
   "serviceee": "Je suis à votre service",
   "calll": "Téléphone",
-  "adressee": "Adresse"
+  "ville": "Ville",
+  "envoyez": "Envoyez moi un mail :)",
+  "reponds": "Je réponds vite",
+  "name": "Nom",
+  "subject": "Objet",
+  "envoyer": "Envoyer"
 }

@@ -53,11 +53,10 @@ async function loadTranslations(language) {
   if (!response.ok) {
     throw new Error(`Erreur lors du chargement du fichier ${language}.json`);
   }
-  const translations = await response.json();
-  return translations;
+  return response.json();
 }
 
-// Fonction pour mettre à jour les textes dynamiquement
+// Fonction pour mettre à jour les textes et attributs dynamiquement
 async function changeLanguage() {
   try {
     // Alterner entre le français et l'anglais
@@ -68,18 +67,33 @@ async function changeLanguage() {
 
     // Parcourir toutes les clés de l'objet translations
     for (const id in translations) {
-      // Vérifier si un élément HTML avec cet ID existe
       const element = document.getElementById(id);
-      if (element) {
-        // Mettre à jour le contenu texte de l'élément
-        element.textContent = translations[id];
+      if (!element) continue;
+
+      const text = translations[id];
+
+      // Si c'est un <input> ou <textarea> avec placeholder, on change l'attribut
+      if (
+        (element.tagName.toLowerCase() === "input" ||
+         element.tagName.toLowerCase() === "textarea") &&
+        element.hasAttribute("placeholder")
+      ) {
+        element.setAttribute("placeholder", text);
+      }
+      // Sinon, on met à jour le texte intérieur
+      else {
+        element.textContent = text;
       }
     }
 
     // Mettre à jour l'image du drapeau
     const translatorIcon = document.querySelector(".translator img");
-    translatorIcon.src = currentLanguage === "fr" ? "images/flags/gb.png" : "images/flags/fr.png";
-    translatorIcon.alt = currentLanguage === "fr" ? "English" : "Français";
+    translatorIcon.src = currentLanguage === "fr"
+      ? "images/flags/gb.png"
+      : "images/flags/fr.png";
+    translatorIcon.alt = currentLanguage === "fr"
+      ? "English"
+      : "Français";
   } catch (error) {
     console.error("Erreur lors du chargement des traductions :", error);
   }
@@ -94,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("L'élément avec la classe .fr-en est introuvable !");
   }
 });
+/* ========================== end of translator =========================== */

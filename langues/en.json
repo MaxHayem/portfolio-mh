@@ -16,6 +16,8 @@
   "age": "Age: ",
   "agee": "22 years old",
   "phonee": "Phone number: ",
+  "linkedinn": "Click here",
+  "gittt": "Click here",
   "contacttt": "Contact me",
   "parcours": "Academic background",
   "isarttt": "Beginning in September 2025",
@@ -42,8 +44,8 @@
   "katz": "Booking and registration site for private individuals",
   "gophishh": "Anti-phishing campaign for companies with Gophish",
   "python": "SQL Database Viewer with Python",
-  "qcm": "PHP Multiple Choice Questionnaire Generator with SQL",
   "chatguez": "Chat in PHP with SQL",
+  "qcm": "PHP Multiple Choice Questionnaire Generator with SQL",
   "veillle": "IT Monitoring",
   "veillee": "Monitoring theme: video game development",
 
@@ -83,5 +85,10 @@
   "quest": "Any question ?",
   "serviceee": "I am at your service",
   "calll": "Phone",
-  "adressee": "Address"
+  "ville": "City",
+  "envoyez": "Send me an email :)",
+  "reponds": "I'll reply quickly",
+  "name": "Name",
+  "subject": "Subject",
+  "envoyer": "Send"
 }
