@@ -65,7 +65,7 @@
     include "connect.php";
 
     // Vérification si le formulaire a été soumis
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['inscr'])) {
         // Récupération des données du formulaire
         $nom = mysqli_real_escape_string($id, trim($_POST['nom']));
         $prenom = mysqli_real_escape_string($id, trim($_POST['prenom']));
@@ -92,6 +92,10 @@
             }
         }
     }
+    if (isset($_POST['conn'])) {
+        header("Location: index.php");
+        exit;
+    }
     ?>
 
     <form action="" method="post">
@@ -107,7 +111,10 @@
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">S'inscrire</button>
+        <button type="submit" name="inscr">S'inscrire</button>
+    </form><br>
+    <form action="" method="post">
+        <button type="submit" name="conn">Déjà inscrit ? Connectez-vous</button>
     </form>
 </body>
 </html>

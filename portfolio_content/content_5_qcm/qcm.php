@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['user_nom'])) {
-    header("Location: connexion.php");
+    header("Location: index.php");
     exit;
 }
 ?>

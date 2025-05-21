@@ -70,7 +70,7 @@ session_start();
    
 
     // Vérification si le formulaire a été soumis
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['bout'])) {
         // Récupération des données du formulaire
         $mail = mysqli_real_escape_string($id, trim($_POST['mail']));
         $password = trim($_POST['password']);
@@ -101,6 +101,9 @@ session_start();
             echo "<div class='message error'>Aucun compte trouvé avec cet email.</div>";
         }
     }
+    if (isset($_POST['insc'])) {
+        header("location:inscription.php");
+    }
     ?>
 
     <form action="" method="post">
@@ -110,7 +113,10 @@ session_start();
         <label for="password">Mot de passe :</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Se connecter</button>
-    </form>
+        <button type="submit" name="bout">Se connecter</button>
+    </form><br> 
+    <form action="" method="post">
+        <button type="submit" name="insc">S'inscrire</button>
+    </form><br>
 </body>
 </html>

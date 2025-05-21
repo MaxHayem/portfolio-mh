@@ -16,11 +16,11 @@ if(isset($_POST["bout"])){
                     values('$nom','$prenom','$mail','$mdp','1')";
             mysqli_query($id,$req);
             echo "inscription reussie, veuillez vous connecter....";
-            header("refresh:3;url=connexion.php");
+            header("refresh:3;url=index.php");
         }
 }
 if(isset($_POST["connexion"])){
-    header("location:connexion.php");
+    header("location:index.php");
 }
 ?>
 
@@ -41,7 +41,7 @@ if(isset($_POST["connexion"])){
         <input type="file" name="avatar"><br><br>
         <input type="submit" value="S'inscrire" name="bout">
     </form><hr>
-    <form action="connexion.php" method="post">
+    <form action="index.php" method="post">
         <input type="submit" value="Déjà inscrit? Connectez-vous" name="connexion">
     </form><hr>
 </body>
